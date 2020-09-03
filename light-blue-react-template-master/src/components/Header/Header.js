@@ -159,7 +159,6 @@ class Header extends React.Component {
                 <img src={avatar} alt="..."/>
               </span>
               <span className={`small ${s.accountCheck}`}>Philip smith</span>
-              <Badge className={s.badge} color="primary">13</Badge>
             </DropdownToggle>
             <DropdownMenu right className={`${s.notificationsWrapper} py-0 animate__animated animate__faster animate__fadeInUp`}>
               <Notifications />
@@ -170,46 +169,6 @@ class Header extends React.Component {
               <i className="glyphicon glyphicon-search text-white" />
             </NavLink>
           </NavItem>
-          <Dropdown nav isOpen={this.state.messagesOpen} toggle={this.toggleMessagesDropdown}>
-            <DropdownToggle nav className={`${s.navItem} text-white`}>
-              <i className="glyphicon glyphicon-comments" />
-            </DropdownToggle>
-            <DropdownMenu className={`${s.dropdownMenu} ${s.messages}`}>
-              <DropdownItem>
-                <img className={s.image} src={sender1} alt="" />
-                <div className={s.details}>
-                  <div>Jane Hew</div>
-                  <div className={s.text}>
-                    Hey, John! How is it going? ...
-                  </div>
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                <img className={s.image} src={sender2} alt="" />
-                <div className={s.details}>
-                  <div>Alies Rumiancaŭ</div>
-                  <div className={s.text}>
-                    I will definitely buy this template
-                  </div>
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                <img className={s.image} src={sender3} alt="" />
-                <div className={s.details}>
-                  <div>Michał Rumiancaŭ</div>
-                  <div className={s.text}>
-                    Is it really Lore ipsum? Lore ...
-                  </div>
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                {/* eslint-disable-next-line */}
-                <a href="#" className="text-white">
-                  See all messages <i className="fa fa-arrow-right" />
-                </a>
-              </DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
           <NavItem className={`${s.divider} text-white`} />
           <Dropdown nav isOpen={this.state.settingsOpen} toggle={this.toggleSettingsDropdown}>
             <DropdownToggle nav className={`${s.navItem} text-white`}>
@@ -297,4 +256,3 @@ function mapStateToProps(store) {
 }
 
 export default withRouter(connect(mapStateToProps)(Header));
-
