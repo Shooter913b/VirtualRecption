@@ -68,6 +68,7 @@ class Charts extends React.Component {
     return (
       <div className={s.root}>
         <h1 className="page-title">Visual - <span className="fw-semi-bold">Charts</span></h1>
+        <br />
         <div>
           <Row>
             <Col lg={7} xs={12}>
@@ -109,7 +110,7 @@ class Charts extends React.Component {
 
                 </Col>
                 <Col lg={12} xs={12}>
-                  
+
                 </Col>
               </Row>
             </Col>

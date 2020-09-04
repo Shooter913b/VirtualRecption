@@ -11,6 +11,8 @@ import LinksGroup from './LinksGroup';
 import {changeActiveSidebarItem} from '../../actions/navigation';
 import {logoutUser} from '../../actions/user';
 
+import logo from '../../images/logo.png';
+
 class Sidebar extends React.Component {
     static propTypes = {
         sidebarStatic: PropTypes.bool,
@@ -71,6 +73,7 @@ class Sidebar extends React.Component {
                 }}
             >
                 <header className={s.logo}>
+                <img width="50px" height="50px" src={logo} alt="..."/>
                     <h4><span className="text-info">Virtual </span><span
                         className="fw-bold">Reception</span></h4>
                 </header>
@@ -127,9 +130,7 @@ class Sidebar extends React.Component {
                             {
                                 header: 'Icons', link: '/app/icons',
                             },
-                            {
-                                header: 'Maps', link: '/app/maps',
-                            },
+
                         ]}
                     />
                 </ul>
