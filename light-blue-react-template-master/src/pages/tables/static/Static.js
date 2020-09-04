@@ -17,8 +17,14 @@ import { Sparklines, SparklinesBars } from 'react-sparklines';
 import { Card, CardBody } from 'reactstrap';
 import Widget from '../../../components/Widget';
 import s from './Static.module.scss';
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+} from "reactstrap";
 
-class Posts extends React.Component {
+
+class Static extends React.Component {
 
   constructor(props) {
     super(props);
@@ -57,17 +63,32 @@ class Posts extends React.Component {
   render() {
     return (
       <div className={s.root}>
-        <h2 className="page-title">Office - <span className="fw-semi-bold">Posts</span></h2>
+        <h1 className="page-title">Posts</h1>
         <Row>
           <Col>
           <Card className="border-0">
-  <CardBody>
-  <hr />
-
-
-    <Button className="btn-rounded-f" color="success">Post</Button>
-  </CardBody>
-</Card>
+            <CardBody>
+            <>
+    <Card>
+      <CardBody>
+        <InputGroup className={this.state.focused}>
+          <InputGroupAddon addonType="prepend">
+            <InputGroupText><i className="fab fa-dribbble"></i></InputGroupText>
+          </InputGroupAddon>
+            <Input
+              type="textarea"
+              placeholder="Type here..."
+              onFocus={this.onFocus}
+              onBlur={this.onBlur}
+            />
+        </InputGroup>
+      </CardBody>
+    </Card>
+  </>
+              <hr />
+                <Button className="btn-rounded-f" color="info">Post</Button>
+            </CardBody>
+          </Card>
           </Col>
         </Row>
         <Row>
@@ -83,4 +104,4 @@ class Posts extends React.Component {
 
 }
 
-export default Posts;
+export default Static;
