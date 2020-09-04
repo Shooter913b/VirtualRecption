@@ -35,8 +35,9 @@ class Profile extends React.Component {
 render(){
   return(
     <div>
-        <h1 className="page-title">Account</h1>
-        <Row>
+        <h1 className="page-title">Account </h1>
+          <br />
+          <Row >
             <Col xs={12} md={6}>
             <Card className="border-0">
               <CardBody>
