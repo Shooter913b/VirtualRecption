@@ -118,7 +118,7 @@ class Static extends React.Component {
 
 <Row>
   <Col>
-  <Card className="border-0",style={{padding-top:"2px"}}>
+  <Card className="border-0">
     <CardBody>
     <div>
 <InputGroup className={this.state.focused}>
