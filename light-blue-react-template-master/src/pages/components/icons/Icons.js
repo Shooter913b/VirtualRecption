@@ -27,7 +27,7 @@ class Icons extends React.Component {
     return (
       <section className={`${s.root} mb-4`}>
         <h1 className="page-title">UI - <span className="fw-semi-bold">Icons</span></h1>
-
+        <br />
         {/* tabs */}
         <Nav className="bg-transparent" tabs>
           <NavItem>

@@ -12,7 +12,7 @@ import {chartData, liveChart, liveChartInterval} from './mock';
 import Sparklines from '../../../components/Sparklines';
 
 import ReactEchartsCore from 'echarts-for-react/lib/core';
- 
+
 import echarts from 'echarts/lib/echarts';
 
 import 'echarts/lib/chart/line';
@@ -68,6 +68,7 @@ class Charts extends React.Component {
     return (
       <div className={s.root}>
         <h1 className="page-title">Visual - <span className="fw-semi-bold">Charts</span></h1>
+        <br />
         <div>
           <Row>
             <Col lg={7} xs={12}>
@@ -75,9 +76,9 @@ class Charts extends React.Component {
                 title={<h5>Apex <span className='fw-semi-bold'>Column Chart</span></h5>}
                 close collapse
               >
-                <ApexChart 
-                  className="sparkline-chart" 
-                  height={350} 
+                <ApexChart
+                  className="sparkline-chart"
+                  height={350}
                   series={cd.apex.column.series}
                   options={cd.apex.column.options}
                   type={"bar"}
@@ -112,7 +113,7 @@ class Charts extends React.Component {
                         <h6 className="name text-muted m0 fs-mini">Overall Values</h6>
                       </div>
                       <div className="stat-item stat-item-mini-chart">
-                        <Sparklines 
+                        <Sparklines
                           options={sparklineData.options2}
                           width={80}
                           height={25}
@@ -128,7 +129,7 @@ class Charts extends React.Component {
                         <h6 className="name text-muted m0 fs-mini">Overall Values</h6>
                       </div>
                       <div className="stat-item stat-item-mini-chart">
-                        <Sparklines 
+                        <Sparklines
                           options={sparklineData.options1}
                           width={80}
                           height={25}
@@ -147,10 +148,10 @@ class Charts extends React.Component {
                     title={<h5>Apex <span className="fw-semi-bold">Monochrome Pie</span></h5>}
                     close collapse
                   >
-                    <ApexChart 
+                    <ApexChart
                       className="sparkline-chart"
-                      type={"pie"} 
-                      height={200} 
+                      type={"pie"}
+                      height={200}
                       series={cd.apex.pie.series}
                       options={cd.apex.pie.options}
                     />
