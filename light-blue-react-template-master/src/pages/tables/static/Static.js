@@ -17,6 +17,8 @@ import { Sparklines, SparklinesBars } from 'react-sparklines';
 import { Card, CardBody } from 'reactstrap';
 import Widget from '../../../components/Widget';
 import s from './Static.module.scss';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   InputGroup,
   InputGroupAddon,
@@ -34,6 +36,7 @@ class Static extends React.Component {
     };
 
   }
+    addSuccessNotification = () => toast.success('Successfully Posted!', this.state.options);
 
   parseDate(date) {
     this.dateSet = date.toDateString().split(' ');
@@ -81,12 +84,13 @@ class Static extends React.Component {
               onFocus={this.onFocus}
               onBlur={this.onBlur}
             />
-        </InputGroup>
-      </CardBody>
-    </Card>
-  </>
+            </InputGroup>
+        </CardBody>
+      </Card>
+    </>
               <hr />
-                <Button className="btn-rounded-f" color="info">Post</Button>
+            <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification}
+             >Post</Button>
             </CardBody>
           </Card>
           </Col>
