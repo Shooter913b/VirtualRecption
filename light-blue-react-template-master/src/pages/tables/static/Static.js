@@ -69,29 +69,77 @@ class Static extends React.Component {
         <h1 className="page-title">Posts</h1>
         <br />
         <Row>
-          <Col>
-          <Card className="border-0">
-            <CardBody>
-            <div>
-        <InputGroup className={this.state.focused}>
-          <InputGroupAddon addonType="prepend">
-            <InputGroupText><i className="fa fa-comment"></i></InputGroupText>
-          </InputGroupAddon>
-            <Input
-              type="textarea"
-              placeholder="Type here..."
-              onFocus={this.onFocus}
-              onBlur={this.onBlur}
-            />
-            </InputGroup>
+        <Col lg={3}>
+    <Card className="border-0">
+  <CardBody>
+    <hr />
+    <div className="d-flex justify-content-between mb-lg">
+      <h4></h4>
     </div>
-              <hr />
-            <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification}
-             >Post</Button>
-            </CardBody>
-          </Card>
-          </Col>
-        </Row>
+  </CardBody>
+</Card>
+</Col>
+
+<Col lg={3}>
+<Card className="border-0">
+<CardBody>
+<hr />
+<div className="d-flex justify-content-between mb-lg">
+<h4></h4>
+</div>
+</CardBody>
+</Card>
+</Col>
+
+
+<Col lg={3}>
+<Card className="border-0">
+<CardBody>
+<hr />
+<div className="d-flex justify-content-between mb-lg">
+<h4></h4>
+</div>
+</CardBody>
+</Card>
+</Col>
+
+
+<Col lg={3}>
+<Card className="border-0">
+<CardBody>
+<hr />
+<div className="d-flex justify-content-between mb-lg">
+<h4></h4>
+</div>
+</CardBody>
+</Card>
+</Col>
+</Row>
+
+<Row>
+  <Col>
+  <Card className="border-0">
+    <CardBody>
+    <div>
+<InputGroup className={this.state.focused}>
+  <InputGroupAddon addonType="prepend">
+    <InputGroupText><i className="fa fa-comment"></i></InputGroupText>
+  </InputGroupAddon>
+    <Input
+      type="textarea"
+      placeholder="Type here..."
+      onFocus={this.onFocus}
+      onBlur={this.onBlur}
+    />
+    </InputGroup>
+</div>
+      <hr />
+    <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification}
+     >Post</Button>
+    </CardBody>
+  </Card>
+  </Col>
+</Row>
         <Row>
           <Col lg={6}>
 
