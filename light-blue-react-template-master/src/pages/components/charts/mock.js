@@ -9,7 +9,7 @@ export const chartData = {
   apex: {
     column: {
       series: [{
-        data: [21, 22, 10, 28, 16, 21, 13, 30]
+        data: [23,21,20,19,18,24]
       }],
       options: {
         chart: {
@@ -27,7 +27,7 @@ export const chartData = {
           enabled: false,
         },
         xaxis: {
-          categories: ['John', 'Joe', 'Jake', 'Amber', 'Peter', 'Mary', 'David', 'Lily'],
+          categories: ['Febaury', 'April', 'june', 'August', 'October', 'decemeber'],
           labels: {
             style: {
               colors: columnColors,
@@ -59,7 +59,7 @@ export const chartData = {
     pie: {
       series: [25, 15, 44, 55, 41, 17],
       options: {
-        labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        labels: ['Febaury', 'April', 'june', 'August', 'October', 'decemeber'],
         theme: {
           monochrome: {
             enabled: true,
@@ -95,7 +95,7 @@ export const chartData = {
         }
       },
       legend: {
-        data: ['2015 Precipitation', '2016 Precipitation'],
+        data: ['2019 growth', '2020 growth'],
         textStyle: {
           color: colors.textColor
         }
@@ -119,7 +119,7 @@ export const chartData = {
           axisPointer: {
             label: {
               formatter: function (params) {
-                return 'Precipitation  ' + params.value
+                return 'growth  ' + params.value
                   + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
               }
             }
@@ -140,7 +140,7 @@ export const chartData = {
           axisPointer: {
             label: {
               formatter: function (params) {
-                return 'Precipitation  ' + params.value
+                return 'month  ' + params.value
                   + (params.seriesData.length ? '：' + params.seriesData[0].data : '');
               }
             }
@@ -173,17 +173,17 @@ export const chartData = {
       ],
       series: [
         {
-          name: '2015 Precipitation',
+          name: '2020 month',
           type: 'line',
           xAxisIndex: 1,
           smooth: true,
-          data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+          data: [23, 21, 20, 19, 18, 24, 21, 17, 2, 1, 4, ]
         },
         {
-          name: '2016 Precipitation',
+          name: '2020 growth',
           type: 'line',
           smooth: true,
-          data: [3.9, 5.9, 11.1, 18.7, 48.3, 69.2, 231.6, 46.6, 55.4, 18.4, 10.3, 0.7]
+          data: [, , , , , , , , , , , ]
         }
       ]
     },
@@ -346,7 +346,7 @@ export const chartData = {
         enabled: false
       },
       title: {
-        text: 'Snow depth at Vikjafjellet, Norway',
+        text: '',
         style: {
           color: colors.textColor
         }
@@ -396,7 +396,7 @@ export const chartData = {
       colors: [colors.green, colors.blue, colors.red],
 
       series: [{
-        name: "Winter 2014-2015",
+        name: "growth",
         data: [
           [Date.UTC(1970, 10, 25), 0],
           [Date.UTC(1970, 11, 6), 0.25],
@@ -427,7 +427,7 @@ export const chartData = {
           [Date.UTC(1971, 6, 4), 0]
         ]
       }, {
-        name: "Winter 2015-2016",
+        name: "growth",
         type: 'areaspline',
         data: [
           [Date.UTC(1970, 10, 9), 0],
