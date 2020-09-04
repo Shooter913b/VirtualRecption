@@ -20,7 +20,7 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
-            email: 'admin@flatlogic.com',
+            email: 'BobScone123@gmail.com',
             password: 'password',
         };
 
@@ -98,7 +98,7 @@ class Login extends React.Component {
                                 </InputGroup>
                             </FormGroup>
                             <div className="bg-widget auth-widget-footer">
-                                <Button type="submit" color="danger" className="auth-btn"
+                                <Button type="submit" color="info" className="auth-btn"
                                         size="sm" style={{color: '#fff'}}>
                                   <span className="auth-btn-circle" style={{marginRight: 8}}>
                                     <i className="la la-caret-right"/>
@@ -141,4 +141,3 @@ function mapStateToProps(state) {
 }
 
 export default withRouter(connect(mapStateToProps)(Login));
-

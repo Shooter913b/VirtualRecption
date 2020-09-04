@@ -47,7 +47,7 @@ class Register extends React.Component {
             if (!this.state.password) {
                 this.props.dispatch(registerError("Password field is empty"));
             } else {
-                this.props.dispatch(registerError("Passwords are not equal"));
+                this.props.dispatch(registerError("Passwords do not match"));
             }
             setTimeout(() => {
                 this.props.dispatch(registerError());
@@ -139,7 +139,7 @@ class Register extends React.Component {
                                 </InputGroup>
                             </FormGroup>
                             <div className="bg-widget-transparent auth-widget-footer">
-                                <Button type="submit" color="danger" className="auth-btn"
+                                <Button type="submit" color="info" className="auth-btn"
                                         size="sm" style={{color: '#fff'}}>{this.props.isFetching ? 'Loading...' : 'Register'}</Button>
                                 <p className="widget-auth-info mt-4">
                                     Already have the account? Login now!
@@ -222,4 +222,3 @@ function mapStateToProps(state) {
 }
 
 export default withRouter(connect(mapStateToProps)(Register));
-
