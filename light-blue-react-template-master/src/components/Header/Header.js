@@ -132,7 +132,7 @@ class Header extends React.Component {
               <span className={`${s.avatar} rounded-circle thumb-sm float-left mr-2`}>
                 <img src={avatar} alt="..."/>
               </span>
-              <p>Bob Scone</p>
+              <p>Mike Benning</p>
           <NavItem className="d-lg-none d-md-block d-sm-none">
             <NavLink onClick={this.toggleSearchOpen} className={s.navItem} href="#">
               <i className="glyphicon glyphicon-search text-white" />
