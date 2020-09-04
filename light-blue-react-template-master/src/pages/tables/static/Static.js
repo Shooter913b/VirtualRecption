@@ -71,12 +71,10 @@ class Static extends React.Component {
           <Col>
           <Card className="border-0">
             <CardBody>
-            <>
-    <Card>
-      <CardBody>
+            <div>
         <InputGroup className={this.state.focused}>
           <InputGroupAddon addonType="prepend">
-            <InputGroupText><i className="fab fa-dribbble"></i></InputGroupText>
+            <InputGroupText><i className="fa fa-comment"></i></InputGroupText>
           </InputGroupAddon>
             <Input
               type="textarea"
@@ -85,9 +83,7 @@ class Static extends React.Component {
               onBlur={this.onBlur}
             />
             </InputGroup>
-        </CardBody>
-      </Card>
-    </>
+    </div>
               <hr />
             <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification}
              >Post</Button>
