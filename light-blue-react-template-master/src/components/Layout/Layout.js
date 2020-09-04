@@ -89,7 +89,7 @@ class Layout extends React.Component {
                 </CSSTransition>
               </TransitionGroup>
               <footer className={s.contentFooter}>
-                Light Blue React Template - React admin template made by Rick, Madhav, Tanish, and Sharva
+                <span className="fw-bold">Virtual Reception </span><span className="text-info">made by Rick, Madhav, Tanish, and Sharva</span>
               </footer>
             </main>
           </Hammer>
