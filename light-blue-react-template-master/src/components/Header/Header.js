@@ -132,7 +132,7 @@ class Header extends React.Component {
               <span className={`${s.avatar} rounded-circle thumb-sm float-left mr-2`}>
                 <img src={avatar} alt="..."/>
               </span>
-              <p>Bob Scone</p>
+              <p>Mike Benning</p>
           <NavItem className="d-lg-none d-md-block d-sm-none">
             <NavLink onClick={this.toggleSearchOpen} className={s.navItem} href="#">
               <i className="glyphicon glyphicon-search text-white" />
@@ -154,50 +154,6 @@ class Header extends React.Component {
                 <Button color="primary" onClick={() => this.toggleVisibilitySidebar('show')} className={this.props.sidebarVisibility === 'show' ? 'active' : ''}>Show</Button>
                 <Button color="primary" onClick={() => this.toggleVisibilitySidebar('hide')} className={this.props.sidebarVisibility === 'hide' ? 'active' : ''}>Hide</Button>
               </ButtonGroup>
-            </DropdownMenu>
-          </Dropdown>
-          <Dropdown nav isOpen={this.state.supportOpen} toggle={this.toggleSupportDropdown}>
-            <DropdownToggle nav className={`${s.navItem} text-white`}>
-              <i className="glyphicon glyphicon-globe" />
-              <span className={s.count}>8</span>
-            </DropdownToggle>
-            <DropdownMenu right className={`${s.dropdownMenu} ${s.support}`}>
-              <DropdownItem>
-                <Badge color="danger"><i className="fa fa-bell-o" /></Badge>
-                <div className={s.details}>
-                  Check out this awesome ticket
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                <Badge color="warning"><i className="fa fa-question-circle" /></Badge>
-                <div className={s.details}>
-                  What is the best way to get ...
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                <Badge color="success"><i className="fa fa-info-circle" /></Badge>
-                <div className={s.details}>
-                  This is just a simple notification
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                <Badge color="info"><i className="fa fa-plus" /></Badge>
-                <div className={s.details}>
-                  12 new orders has arrived today
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-                <Badge color="danger"><i className="fa fa-tag" /></Badge>
-                <div className={s.details}>
-                  One more thing that just happened
-                </div>
-              </DropdownItem>
-              <DropdownItem>
-               {/* eslint-disable-next-line */}
-               <a href="#" className="text-white">
-                  See all tickets <i className="fa fa-arrow-right" />
-                </a>
-              </DropdownItem>
             </DropdownMenu>
           </Dropdown>
           <NavItem>

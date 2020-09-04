@@ -133,7 +133,7 @@ class Sidebar extends React.Component {
                         ]}
                     />
                 </ul>
-                
+
             </nav>
         );
     }
