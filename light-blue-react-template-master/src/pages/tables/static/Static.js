@@ -69,54 +69,6 @@ class Static extends React.Component {
         <h1 className="page-title">Posts</h1>
         <br />
         <Row>
-        <Col lg={3}>
-    <Card className="border-0">
-  <CardBody>
-    <hr />
-    <div className="d-flex justify-content-between mb-lg">
-      <h4></h4>
-    </div>
-  </CardBody>
-</Card>
-</Col>
-
-<Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div className="d-flex justify-content-between mb-lg">
-<h4></h4>
-</div>
-</CardBody>
-</Card>
-</Col>
-
-
-<Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div className="d-flex justify-content-between mb-lg">
-<h4></h4>
-</div>
-</CardBody>
-</Card>
-</Col>
-
-
-<Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div className="d-flex justify-content-between mb-lg">
-<h4></h4>
-</div>
-</CardBody>
-</Card>
-</Col>
-</Row>
-
-<Row>
   <Col>
   <Card className="border-0">
     <CardBody>
