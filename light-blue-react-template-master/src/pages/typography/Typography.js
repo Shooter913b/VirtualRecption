@@ -8,60 +8,50 @@ import Widget from '../../components/Widget';
 
 const Typography = () => (
     <div>
-        <h1 className="page-title">Typography - <span className="fw-semi-bold">Texts & Display</span></h1>
+        <h1 className="page-title">Account</h1>
         <Row>
             <Col xs={12} md={6}>
                 <Widget
-                    title={<h5>Headings <small className="text-muted">Default and customized</small></h5>}
+                    title={<h4>Monthly Reminders <small className="text-muted" className="text-info">6 reminders today</small></h4>}
                     close collapse
                 >
-                    <h4>Default headings</h4>
-                    <p>Basic headings for everyday use</p>
+                    <h4>Reminders</h4>
+                    <p>You have 6 reminders today</p>
                     <div className="widget-padding-md w-100 h-100 text-left border rounded">
                         <Row>
                             <Col sm={6}>
-                                <h1>h1. Heading</h1>
-                                <h2>h2. Heading</h2>
-                                <h3>h3. Heading</h3>
-                                <h4>h4. Heading</h4>
-                                <h5>h5. Heading</h5>
-                                <h6>h6. Heading</h6>
+                            <h3>Presentation Today</h3>
+                            <p>___________________________________</p>
+                            <h3>Ron's Birthday Tomorrow</h3>
+                            <p>___________________________________</p>
+                            <h3>Upcoming Project</h3>
+                            <p>___________________________________</p>
+                            <h3>Upcoming Presentation</h3>
+                            <p>___________________________________</p>
+                            <h3>Mike's Birthday Coming up</h3>
+                            <p>___________________________________</p>
+                            <h3>Upcoming Presentation</h3>
                             </Col>
                             <Col sm={6}>
-                                <h1 className="text-danger">h1. Heading</h1>
-                                <h2 className="text-warning">h2. Heading</h2>
-                                <h3 className="text-success">h3. Heading</h3>
-                                <h4 className="text-primary">h4. Heading</h4>
-                                <h5 className="text-info">h5. Heading</h5>
-                                <h6 className="text-inverse">h6. Heading</h6>
+                                <p className="text-info">Jack's PowerPoint Presentation in the conference room at 12:00.</p>
+                                <p>___________________________________</p>
+                                <p className="text-info">People meeting at the nearest Starbucks.</p>
+                                <p>___________________________________</p>
+                                <p className="text-info">Project begins on September 8th, due on September 15th.</p>
+                                <p>___________________________________</p>
+                                <p className="text-info">Your Google Slides Presentation on September 11th.</p>
+                                <p>___________________________________</p>
+                                <p className="text-info">People meeting on September 18th.</p>
+                                <p>___________________________________</p>
+                                <p className="text-info">Howard's Google Slides Presentation on September 23rd.</p>
                             </Col>
                         </Row>
-                    </div>
-                    <h4 className="mt-5">Customized headings</h4>
-                    <p>Enhanced with additional text</p>
-                    <div className="widget-padding-md w-100 h-100 text-left border rounded">
-                        <h3>
-                            Headings <small>And some clarification text</small>
-                        </h3>
-                    </div>
-                    <h4 className="mt-5">Display</h4>
-                    <p>Headings to stand out</p>
-                    <div className="widget-padding-md w-100 h-100 text-left border rounded">
-                        <h1 className="display-1">Display 1</h1>
-                        <h1 className="display-2">Display 2</h1>
-                        <h1 className="display-3">Display 3</h1>
-                        <h1 className="display-4">Display 4</h1>
-                    </div>
-                    <h4 className="mt-5">Lead</h4>
-                    <p>Make a paragraph stand out by adding <code className="highlighter-rouge">.lead</code>.</p>
-                    <div className="widget-padding-md w-100 h-100 text-left border rounded">
-                        <p className="lead">Light Blue Template is admin dashboard template built with Bootstrap</p>
                     </div>
                 </Widget>
             </Col>
             <Col xs={12} md={6}>
                 <Widget
-                    title={<h5>Body texts <small className="text-muted">Variations</small></h5>}
+                    title={<h4>Something <small className="text-muted" className="text-info">something else</small></h4>}
                     close collapse
                 >
                     <h4>Basic texts</h4>

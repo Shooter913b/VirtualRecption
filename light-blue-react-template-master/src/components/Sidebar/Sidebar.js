@@ -71,11 +71,11 @@ class Sidebar extends React.Component {
                 }}
             >
                 <header className={s.logo}>
-                    <a href="https://demo.flatlogic.com/light-blue-react/">Name <span
-                        className="fw-bold">here</span></a>
+                    <h4><span className="text-info">Virtual </span><span
+                        className="fw-bold">Reception</span></h4>
                 </header>
                 <ul className={s.nav}>
-                    <LinksGroup
+                    <LinksGroup className="text-info"
                         onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
                         activeItem={this.props.activeItem}
                         header="Dashboard Map"
@@ -85,16 +85,16 @@ class Sidebar extends React.Component {
                         index="main"
                     />
 
-                    <LinksGroup
+                    <LinksGroup className="text-info"
                         onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
                         activeItem={this.props.activeItem}
-                        header="Typography"
+                        header="Account"
                         isHeader
-                        iconName="flaticon-network"
+                        iconName="flaticon-user"
                         link="/app/typography"
                         index="core"
                     />
-                    <LinksGroup
+                    <LinksGroup className="text-info"
                         onActiveSidebarItemChange={t => this.props.dispatch(changeActiveSidebarItem(t))}
                         activeItem={this.props.activeItem}
                         header="Tables Basic"
@@ -103,7 +103,7 @@ class Sidebar extends React.Component {
                         link="/app/tables"
                         index="tables"
                     />
-                    <LinksGroup
+                    <LinksGroup className="text-info"
                         onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
                         activeItem={this.props.activeItem}
                         header="Notifications"
@@ -112,7 +112,7 @@ class Sidebar extends React.Component {
                         link="/app/notifications"
                         index="ui"
                     />
-                    <LinksGroup
+                    <LinksGroup className="text-info"
                         onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
                         activeItem={this.props.activeItem}
                         header="Components"
