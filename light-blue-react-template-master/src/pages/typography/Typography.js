@@ -8,9 +8,9 @@ import {
     InputGroup,
     InputGroupText,
     Input,
-    InputGroupAddon
+    InputGroupAddon,
+    Progress
 } from 'reactstrap';
-import { Progress } from 'reactstrap';
 
 
 import Widget from '../../components/Widget';
@@ -48,11 +48,7 @@ const Typography = () => (
                         />
                 </InputGroup>
                   <br />
-                  <Button
-                    className="btn-rounded-f"
-                    color="info">
-                    Change Password
-                  </Button>
+                    <Button color="info">Change Password</Button>
                   <br />
                   <div className="text-center">8 Posts</div>
                     <br />
