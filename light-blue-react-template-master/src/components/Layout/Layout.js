@@ -8,7 +8,7 @@ import Hammer from 'rc-hammerjs';
 import UIIcons from '../../pages/components/icons';
 import UINotifications from '../../pages/notifications';
 import TablesStatic from '../../pages/tables/static';
-import MapsGoogle from '../../pages/components/maps/google';
+import MapsGoogle from '../../pages/dashboard/components/maps/google';
 import CoreTypography from '../../pages/typography';
 import Charts from '../../pages/components/charts/Charts';
 import Dashboard from '../../pages/dashboard';

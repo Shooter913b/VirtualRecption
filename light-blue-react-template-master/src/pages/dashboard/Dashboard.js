@@ -11,7 +11,7 @@ import {
 import Widget from '../../components/Widget';
 
 import Calendar from './components/calendar/Calendar';
-import Map from './components/am4chartMap/am4chartMap';
+import Map from './components/maps/google/Google';
 import Rickshaw from './components/rickshaw/Rickshaw';
 
 import AnimateNumber from 'react-animated-number';
@@ -64,51 +64,14 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className={s.root}>
-        <h1 className="page-title">Dashboard &nbsp;
-          <small>
-            <small>Map</small>
-          </small>
-        </h1>
-
+        
         <Row>
           <Col lg={12}>
             <Widget className="bg-transparent">
               <Map />
             </Widget>
           </Col>
-          <Col lg={1} />
 
-          <Col lg={4}>
-
-          </Col>
-
-        </Row>
-
-        <Row>
-          <Col lg={4} xs={12}>
-
-          </Col>
-          <Col lg={4} xs={12}>
-
-          </Col>
-          <Col lg={4} xs={12}>
-
-          </Col>
-
-        </Row>
-
-        <Row>
-          <Col lg={4} xs={12}>
-
-          </Col>
-
-          <Col lg={4} xs={12}>
-
-          </Col>
-
-          <Col lg={4} xs={12}>
-
-          </Col>
 
         </Row>
 
