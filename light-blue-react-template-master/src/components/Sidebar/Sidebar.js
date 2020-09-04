@@ -97,7 +97,7 @@ class Sidebar extends React.Component {
                     <LinksGroup className="text-info"
                         onActiveSidebarItemChange={t => this.props.dispatch(changeActiveSidebarItem(t))}
                         activeItem={this.props.activeItem}
-                        header="Tables Basic"
+                        header="Posts"
                         isHeader
                         iconName="flaticon-map-location"
                         link="/app/tables"
