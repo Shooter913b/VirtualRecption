@@ -127,43 +127,12 @@ class Header extends React.Component {
   render() {
     return (
       <Navbar className={`d-print-none ${s.root}`}>
-        <UncontrolledAlert className={`${s.alert} mr-3 d-lg-down-none animate__animated animate__bounceIn animate__delay-1s`}>
-          <i className="fa fa-info-circle mr-1" /> Check out Light Blue <button className="btn-link" onClick={() => this.setState({ settingsOpen: true })}>settings</button> on
-          the right!
-        </UncontrolledAlert>
-        <Collapse className={`${s.searchCollapse} ml-lg-0 mr-md-3`} isOpen={this.state.searchOpen}>
-          <InputGroup className={`${s.navbarForm} ${this.state.searchFocused ? s.navbarFormFocused : ''}`}>
-            <InputGroupAddon addonType="prepend" className={s.inputAddon}><InputGroupText><i className="fa fa-search" /></InputGroupText></InputGroupAddon>
-            <Input
-              id="search-input-2" placeholder="Search..." className="input-transparent"
-              onFocus={() => this.setState({ searchFocused: true })}
-              onBlur={() => this.setState({ searchFocused: false })}
-            />
-          </InputGroup>
-        </Collapse>
-        <Form className="d-md-down-none mr-3 ml-3" inline>
-          <FormGroup>
-            <InputGroup className="input-group-no-border">
-              <InputGroupAddon addonType="prepend">
-                <InputGroupText><i className="fa fa-search text-white" /></InputGroupText>
-              </InputGroupAddon>
-              <Input id="search-input" className="input-transparent" placeholder="Search" />
-            </InputGroup>
-          </FormGroup>
-        </Form>
 
         <Nav className="ml-md-0 d-flex nav-responsive">
-          <Dropdown nav isOpen={this.state.notificationsOpen} toggle={this.toggleNotifications} id="basic-nav-dropdown" className={`${s.notificationsMenu}`} style={{marginRight: 'auto'}}>
-            <DropdownToggle nav caret style={{color: "#f4f4f5", padding: 0}}>
               <span className={`${s.avatar} rounded-circle thumb-sm float-left mr-2`}>
                 <img src={avatar} alt="..."/>
               </span>
-              <span className={`small ${s.accountCheck}`}>Philip smith</span>
-            </DropdownToggle>
-            <DropdownMenu right className={`${s.notificationsWrapper} py-0 animate__animated animate__faster animate__fadeInUp`}>
-              <Notifications />
-            </DropdownMenu>
-          </Dropdown>
+              <p>Bob Scone</p>
           <NavItem className="d-lg-none d-md-block d-sm-none">
             <NavLink onClick={this.toggleSearchOpen} className={s.navItem} href="#">
               <i className="glyphicon glyphicon-search text-white" />
