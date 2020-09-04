@@ -156,7 +156,7 @@ function Locate({ panTo }) {
         );
       }}
     >
-      <img src="compass" alt="1" />
+      <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/compass-2305906-1960705.png" alt="1" />
     </button>
   );
 }
