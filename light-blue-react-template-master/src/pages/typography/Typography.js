@@ -10,6 +10,8 @@ import {
     Input,
     InputGroupAddon
 } from 'reactstrap';
+import { Progress } from 'reactstrap';
+
 
 import Widget from '../../components/Widget';
 
@@ -51,6 +53,10 @@ const Typography = () => (
                     color="info">
                     Change Password
                   </Button>
+                  <br />
+                  <div className="text-center">8 Posts</div>
+                    <br />
+                       <Progress value="8" />
                 </CardBody>
               </Card>
             </Col>
