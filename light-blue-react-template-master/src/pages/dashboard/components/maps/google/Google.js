@@ -109,7 +109,7 @@ export default function App() {
               setSelected(marker);
             }}
             icon={{
-              url: `/bear.svg`,
+
               origin: new window.google.maps.Point(0, 0),
               anchor: new window.google.maps.Point(15, 15),
               scaledSize: new window.google.maps.Size(30, 30),
@@ -156,7 +156,7 @@ function Locate({ panTo }) {
         );
       }}
     >
-      <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/compass-2305906-1960705.png" alt="1" />
+        <img src="compass.svg" alt="compass" />
     </button>
   );
 }
