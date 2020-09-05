@@ -41,7 +41,10 @@ class Static extends React.Component {
   }
 
 
-    addSuccessNotification = () => toast.success('Successfully Posted!', this.state.options);
+    addSuccessNotification = () =>{
+      toast.success('Successfully Posted!', this.state.options);
+      numOfPosts=numOfPosts+1;
+  }
 
   parseDate(date) {
     this.dateSet = date.toDateString().split(' ');
@@ -68,7 +71,7 @@ class Static extends React.Component {
     });
   }
 
-  postCounter = () => numOfPosts=numOfPosts+1;
+
 
   render() {
     return (
@@ -148,7 +151,7 @@ False, Black Bear.</h5>
         </InputGroup>
     </div>
           <hr />
-        <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification, this.postCounter}
+        <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification}
          >Post</Button>
         </CardBody>
       </Card>
