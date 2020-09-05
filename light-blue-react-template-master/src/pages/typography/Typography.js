@@ -27,9 +27,9 @@ let numOfPosts = 8
 class Profile extends React.Component {
   addErrorNotification = () => {
     let id = uuid();
-    toast.error(
+    toast.success(
     <div>
-      Error changing password. Unavailable at this time. Please try again later <br/>
+      Password successfully changed<br/>
 
     </div>,
 
