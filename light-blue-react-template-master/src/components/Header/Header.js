@@ -27,6 +27,8 @@ import Notifications from '../Notifications';
 import { logoutUser } from '../../actions/user';
 import { openSidebar, closeSidebar, changeSidebarPosition, changeSidebarVisibility } from '../../actions/navigation';
 
+import LinksGroup from '../Sidebar/LinksGroup';
+
 import sender1 from '../../images/1.png';
 import sender2 from '../../images/2.png';
 import sender3 from '../../images/3.png';
@@ -132,7 +134,11 @@ class Header extends React.Component {
               <span className={`${s.avatar} rounded-circle thumb-sm float-left mr-2`}>
                 <img src={avatar} alt="..."/>
               </span>
-              <p>Bob Scone</p>
+              <LinksGroup className="fw-bold"
+                  header="Bob Scone"
+                  isHeader
+                  link="/app/typography"
+              />
           <NavItem className="d-lg-none d-md-block d-sm-none">
             <NavLink onClick={this.toggleSearchOpen} className={s.navItem} href="#">
               <i className="glyphicon glyphicon-search text-white" />
