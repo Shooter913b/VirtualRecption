@@ -24,18 +24,23 @@ import {
   InputGroupAddon,
   InputGroupText,
 } from "reactstrap";
+//import numOfPosts from './NumOfPosts';
 
+let numOfPosts = 8
 
 class Static extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    };
-
+  state = {
+    options: {
+      position: "top-right",
+      autoClose: 5000,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true
+    }
   }
+
+
     addSuccessNotification = () => toast.success('Successfully Posted!', this.state.options);
 
   parseDate(date) {
@@ -62,6 +67,8 @@ class Static extends React.Component {
       [checkbox]: this.state[checkbox],
     });
   }
+
+  postCounter = () => numOfPosts=numOfPosts+1;
 
   render() {
     return (
@@ -141,7 +148,7 @@ False, Black Bear.</h5>
         </InputGroup>
     </div>
           <hr />
-        <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification}
+        <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification, this.postCounter}
          >Post</Button>
         </CardBody>
       </Card>

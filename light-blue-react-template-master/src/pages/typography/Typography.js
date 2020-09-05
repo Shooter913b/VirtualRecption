@@ -17,10 +17,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import uuid from 'uuid/v4'
 import Widget from '../../components/Widget';
 import s from '../notifications/Notifications.module.scss';
-
+//import numOfPosts from '../tables/static/NumOfPosts'
 
 
 import avatar from '../../images/people/a5.jpg';
+
+let numOfPosts = 8
+
 class Profile extends React.Component {
   addErrorNotification = () => {
     let id = uuid();
@@ -30,19 +33,28 @@ class Profile extends React.Component {
 
     </div>,
 
+
+
     );
   }
+
 render(){
   return(
     <div>
         <h1 className="page-title">Account </h1>
           <br />
           <Row >
-            <Col xs={12} md={6}>
+            <Col xs={12} md={9}>
             <Card className="border-0">
               <CardBody>
                 <h2 className="text-info">Bob Scone</h2>
-                  <img src={avatar} alt="..."/>
+                  <Col><img src={avatar} alt="..."/>
+                  <ul>
+                    <li>Username: Bob Scone</li>
+                    <li>Password: Password</li>
+                    <li>Email: BobScone123@gmail.com</li>
+                    <li>Rank: Manager</li>
+                  </ul></Col>
                 <hr />
                 <p>Change Password</p>
                 <InputGroup>
@@ -71,9 +83,9 @@ render(){
 
 
                   <br />
-                  <div className="text-center">8 Posts</div>
+                  <div className="text-center">{numOfPosts}</div>
                     <br />
-                       <Progress value="8" />
+                       <Progress value={numOfPosts} />
                 </CardBody>
               </Card>
             </Col>
