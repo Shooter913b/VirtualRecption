@@ -73,8 +73,11 @@ class Static extends React.Component {
     <Card className="border-0">
     <CardBody>
     <hr />
-    <div className="d-flex justify-content-between mb-lg">
-    <h4></h4>
+    <div>
+    <h3>Michael Scott</h3>
+    <br />
+    <h5>Everyone, we have bad news... the copier is broken. But
+    we are going to make the hot receptionist fix it so don't worry!</h5>
     </div>
     </CardBody>
     </Card>
@@ -84,8 +87,11 @@ class Static extends React.Component {
 <Card className="border-0">
 <CardBody>
 <hr />
-<div className="d-flex justify-content-between mb-lg">
-<h4></h4>
+<div>
+<h3>Angela Martin</h3>
+<br />
+<h5>Our new product is launching tomorrow. Be sure to attend the
+meeting at 10:30AM sharp.</h5>
 </div>
 </CardBody>
 </Card>
@@ -93,8 +99,11 @@ class Static extends React.Component {
 <Card className="border-0">
 <CardBody>
 <hr />
-<div className="d-flex justify-content-between mb-lg">
-<h4></h4>
+<div>
+<h3>Jim Halpert</h3>
+<br />
+<h5>Promotions announced 9/6/20 at the bulletin board.
+Make sure to keep you look out for that.</h5>
 </div>
 </CardBody>
 </Card>
@@ -102,8 +111,11 @@ class Static extends React.Component {
 <Card className="border-0">
 <CardBody>
 <hr />
-<div className="d-flex justify-content-between mb-lg">
-<h4></h4>
+<div>
+<h3>Dwight Schrute</h3>
+<br />
+<h5>Heres the trivia for the day. Question: What kind of bear is best.
+False, Black Bear.</h5>
 </div>
 </CardBody>
 </Card>
