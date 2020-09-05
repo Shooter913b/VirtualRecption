@@ -7,6 +7,8 @@ import Widget from '../../components/Widget';
 import { loginUser } from '../../actions/user';
 import microsoft from '../../images/microsoft.png';
 
+import logo from '../../images/logo.png';
+
 class Login extends React.Component {
     static propTypes = {
         dispatch: PropTypes.func.isRequired,
@@ -60,7 +62,9 @@ class Login extends React.Component {
         return (
             <div className="auth-page">
                 <Container>
-                    <Widget className="widget-auth mx-auto" title={<h3 className="mt-0">Login to your Web App</h3>}>
+                  <Widget className="widget-auth mx-auto" title={
+                    <h3 className="mt-0">Login to Virtual Reception</h3>}>
+                    <h3><img width="100px" height="100px"  src={logo} alt="..."/></h3>
                         <p className="widget-auth-info">
                             Use your email to sign in.
                         </p>
@@ -125,7 +129,7 @@ class Login extends React.Component {
                     </Widget>
                 </Container>
                 <footer className="auth-footer">
-                    2020 &copy; Light Blue Template - React Admin Dashboard Template.
+                    Virtual Reception made by Rick, Madhav, Tanish, and Sharva
                 </footer>
             </div>
         );
