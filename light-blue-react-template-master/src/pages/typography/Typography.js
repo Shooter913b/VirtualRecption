@@ -24,9 +24,9 @@ import avatar from '../../images/people/a5.jpg';
 class Profile extends React.Component {
   addErrorNotification = () => {
     let id = uuid();
-    toast.success(
+    toast.error(
     <div>
-      Password successfully changed. <br/>
+      Error changing password. Unavailable at this time. Please try again later <br/>
 
     </div>,
 
