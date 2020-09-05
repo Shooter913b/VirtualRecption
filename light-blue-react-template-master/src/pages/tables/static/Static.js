@@ -66,87 +66,76 @@ class Static extends React.Component {
   render() {
     return (
       <div className={s.root}>
-        <h1 className="page-title">Posts</h1>
-        <br />
-        <Row>
-        <Col lg={3}>
+          <h1 className="page-title">Posts</h1>
+          <br />
+          <Row>
+          <Col lg={3}>
     <Card className="border-0">
-  <CardBody>
+    <CardBody>
     <hr />
     <div className="d-flex justify-content-between mb-lg">
-      <h4></h4>
+    <h4></h4>
     </div>
-  </CardBody>
-</Card>
-</Col>
-
-<Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div className="d-flex justify-content-between mb-lg">
-<h4></h4>
-</div>
-</CardBody>
-</Card>
-</Col>
-
-
-<Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div className="d-flex justify-content-between mb-lg">
-<h4></h4>
-</div>
-</CardBody>
-</Card>
-</Col>
-
-
-<Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div className="d-flex justify-content-between mb-lg">
-<h4></h4>
-</div>
-</CardBody>
-</Card>
-</Col>
-</Row>
-<br />
-<Row>
-  <Col>
-  <Card className="border-0">
-    <CardBody>
-    <div>
-<InputGroup className={this.state.focused}>
-  <InputGroupAddon addonType="prepend">
-    <InputGroupText><i className="fa fa-comment"></i></InputGroupText>
-  </InputGroupAddon>
-    <Input
-      type="textarea"
-      placeholder="Type here..."
-      onFocus={this.onFocus}
-      onBlur={this.onBlur}
-    />
-    </InputGroup>
-</div>
-      <hr />
-    <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification}
-     >Post</Button>
     </CardBody>
-  </Card>
-  </Col>
-</Row>
-        <Row>
-          <Col lg={6}>
+    </Card>
+    </Col>
 
-          </Col>
-          <Col lg={6}>
-          </Col>
-        </Row>
+    <Col lg={3}>
+<Card className="border-0">
+<CardBody>
+<hr />
+<div className="d-flex justify-content-between mb-lg">
+<h4></h4>
+</div>
+</CardBody>
+</Card>
+</Col>  <Col lg={3}>
+<Card className="border-0">
+<CardBody>
+<hr />
+<div className="d-flex justify-content-between mb-lg">
+<h4></h4>
+</div>
+</CardBody>
+</Card>
+</Col>  <Col lg={3}>
+<Card className="border-0">
+<CardBody>
+<hr />
+<div className="d-flex justify-content-between mb-lg">
+<h4></h4>
+</div>
+</CardBody>
+</Card>
+</Col>
+    </Row>
+    <br />
+
+    <Row>
+      <Col>
+      <Card className="border-0">
+        <CardBody>
+        <div>
+    <InputGroup className={this.state.focused}>
+      <InputGroupAddon addonType="prepend">
+        <InputGroupText><i className="fa fa-comment"></i></InputGroupText>
+      </InputGroupAddon>
+        <Input
+          type="textarea"
+          placeholder="Type here..."
+          onFocus={this.onFocus}
+          onBlur={this.onBlur}
+        />
+        </InputGroup>
+    </div>
+          <hr />
+        <Button className="btn-rounded-f" color="info" id="show-success-message" onClick={this.addSuccessNotification}
+         >Post</Button>
+        </CardBody>
+      </Card>
+      </Col>
+    </Row>
+  <br />
       </div>
     );
   }
