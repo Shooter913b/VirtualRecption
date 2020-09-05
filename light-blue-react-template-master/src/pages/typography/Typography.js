@@ -48,7 +48,7 @@ render(){
             <Card className="border-0">
               <CardBody>
                 <h2 className="text-info">Bob Scone</h2>
-                  <Col><img src={avatar} alt="..."/>
+                  <Col lg="4" xs="12"><img src={avatar} alt="..."/>
                   <ul>
                     <li>Username: Bob Scone</li>
                     <li>Password: Password</li>
