@@ -75,7 +75,8 @@ class Notifications extends React.Component {
         <h1 className="page-title">Messages - <span className="fw-semi-bold">Notifications</span>
         </h1>
         <br />
-
+        <br />
+        <br />
         <Widget title={<h6> Messenger </h6>} close collapse settings>
           <Row>
             <Col lg="4" xs="12">

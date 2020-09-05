@@ -78,6 +78,8 @@ class Static extends React.Component {
       <div className={s.root}>
           <h1 className="page-title">Posts</h1>
           <br />
+          <br />
+          <br />
           <Row>
           <Col lg={3}>
     <Card className="border-0">

@@ -18,8 +18,10 @@ import uuid from 'uuid/v4'
 import Widget from '../../components/Widget';
 import s from '../notifications/Notifications.module.scss';
 //import numOfPosts from '../tables/static/NumOfPosts'
-
-
+//
+import Login from '../login';
+import { registerUser, registerError } from '../../actions/register';
+//
 import avatar from '../../images/people/a5.jpg';
 
 let numOfPosts = 8
@@ -31,8 +33,8 @@ class Profile extends React.Component {
     <div>
       Password successfully changed<br/>
 
-    </div>,
 
+    </div>,
 
 
     );
@@ -43,18 +45,21 @@ render(){
     <div>
         <h1 className="page-title">Account </h1>
           <br />
+          <br />
+          <br />
           <Row >
             <Col xs={12} md={9}>
             <Card className="border-0">
               <CardBody>
                 <h2 className="text-info">Bob Scone</h2>
-                  <Col lg="4" xs="12"><img src={avatar} alt="..."/>
+                  <img src={avatar} alt="..."/>
+                  <br />
                   <ul>
                     <li>Username: Bob Scone</li>
                     <li>Password: Password</li>
                     <li>Email: BobScone123@gmail.com</li>
                     <li>Rank: Manager</li>
-                  </ul></Col>
+                  </ul>
                 <hr />
                 <p>Change Password</p>
                 <InputGroup>

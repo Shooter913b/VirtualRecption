@@ -67,13 +67,15 @@ class Charts extends React.Component {
     const { cd, ld, initEchartsOptions, sparklineData } = this.state
     return (
       <div className={s.root}>
-        <h1 className="page-title">Visual - <span className="fw-semi-bold">Charts</span></h1>
+        <h1 className="page-title">Company Growth<span className="fw-semi-bold">Charts</span></h1>
+        <br />
+        <br />
         <br />
         <div>
           <Row>
             <Col lg={7} xs={12}>
               <Widget
-                title={<h5>Apex <span className='fw-semi-bold'>Column Chart</span></h5>}
+                title={<h5><span className='fw-semi-bold'>Stocks</span></h5>}
                 close collapse
               >
                 <ApexChart
@@ -87,7 +89,7 @@ class Charts extends React.Component {
             </Col>
             <Col lg={5} xs={12}>
               <Widget
-                title={<h5>Echarts <span className='fw-semi-bold'>Line Chart</span></h5>}
+                title={<h5><span className='fw-semi-bold'>Yearly Growth</span></h5>}
                 close collapse
               >
                 <ReactEchartsCore
