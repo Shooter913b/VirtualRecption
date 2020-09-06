@@ -58,7 +58,7 @@ render(){
                     <li>Username: Bob Scone</li>
                     <li>Password: Password</li>
                     <li>Email: BobScone123@gmail.com</li>
-                    <li>Rank: Manager</li>
+                    <li>Rank: <span className="text-success">Manager</span></li>
                   </ul>
                 <hr />
                 <p>Change Password</p>

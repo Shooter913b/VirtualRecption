@@ -115,7 +115,7 @@ meeting at 10:30AM sharp.</h5>
 <h3>Jim Halpert</h3>
 <br />
 <h5>Promotions announced 9/6/20 at the bulletin board.
-Make sure to keep you look out for that.</h5>
+Make sure to keep a look out for that.</h5>
 </div>
 </CardBody>
 </Card>
