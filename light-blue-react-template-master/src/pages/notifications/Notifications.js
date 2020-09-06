@@ -81,7 +81,7 @@ class Notifications extends React.Component {
         <br />
 
 
-  <Widget title={<h4> Our Staff </h4>} close collapse settings>
+  <Widget title={<h4> Our Staff </h4>} collapse settings>
     <Row>
       <Col lg="2" xs="12">
         <h5 className="m-t-1" className="text-danger">CEO</h5>
