@@ -10,6 +10,8 @@ import uuid from 'uuid/v4'
 import Widget from '../../components/Widget';
 import s from './Notifications.module.scss';
 
+import LinksGroup from '../../components/Sidebar/LinksGroup';
+
 class Notifications extends React.Component {
 
   state = {
@@ -82,26 +84,27 @@ class Notifications extends React.Component {
     <h3>Roles</h3>
     <hr />
     <Row>
-      <Col lg="4" xs="12">
+      <Col lg="2" xs="12">
         <h5 className="m-t-1" className="text-danger">CEO</h5>
         <ul>
           <li>Hugo Scottsman</li>
         </ul>
       </Col>
 
-      <Col lg="4" xs="12">
+      <Col lg="2" xs="12">
         <h5 className="m-t-1" className="text-warning">Executive Manager</h5>
         <ul>
           <li>Hector Martinez</li>
           <li>Jan Levinson</li>
           <li>Matthew</li>
-          <li>Ryan </li>
+          <li>Ryan Fitzgerald</li>
           <li>Dan King</li>
-          <li>Aaron </li>
+          <li><span className="fw-bold">Bob Scone </span>(You)</li>
+          <li><LinksGroup className="fw-bold" className="text-info" header="YOUR ACCOUNT" isHeader link="/app/typography"/></li>
         </ul>
       </Col>
 
-      <Col lg="4" xs="12">
+      <Col lg="2" xs="12">
         <h5 className="m-t-1" className="text-success">Manager</h5>
         <ul>
         <li>Scott Rogers</li>
@@ -109,18 +112,18 @@ class Notifications extends React.Component {
         <li>Julia Milton</li>
         <li>Jack Freeman</li>
         <li>Travis Strater</li>
-        <li><span className="fw-bold">Bob Scone</span> (You)</li>
+        <li>Aaron Rosco</li>
         <li>Angela Martin</li>
         <li>Brody </li>
         <li>Stanley Green</li>
         <li>Jim Halpert</li>
         <li>Sam Berling</li>
         <li>Michael Scott</li>
-        <li>William</li>
+        <li>William Adams</li>
         </ul>
       </Col>
 
-      <Col lg="4" xs="12">
+      <Col lg="2" xs="12">
         <h5 className="m-t-1" className="text-info">Salesman</h5>
         <ul>
         <li>Kevin Garcia</li>
@@ -146,7 +149,7 @@ class Notifications extends React.Component {
         </ul>
       </Col>
 
-      <Col lg="4" xs="12">
+      <Col lg="2" xs="12">
         <h5 className="m-t-1" className="text-info">Salesman</h5>
         <ul>
         <li>Alex Chang</li>
@@ -175,7 +178,7 @@ class Notifications extends React.Component {
   </CardBody>
 </Card>
   <br />
-        <Widget title={<h6> Birthdays </h6>} close collapse settings>
+        <Widget title={<h4> Birthdays </h4>} close collapse settings>
           <Row>
             <Col lg="4" xs="12">
               <h5 className="m-t-1" className="fw-bold">September</h5>
