@@ -134,7 +134,7 @@ class Header extends React.Component {
               <span className={`${s.avatar} rounded-circle thumb-sm float-left mr-2`}>
                 <img src={avatar} alt="..."/>
               </span>
-              <LinksGroup className="fw-bold"
+              <LinksGroup className="fw-bold" className="text-info"
                   header="Bob Scone"
                   isHeader
                   link="/app/typography"

@@ -100,9 +100,9 @@ class Sidebar extends React.Component {
                     <LinksGroup className="text-info"
                         onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
                         activeItem={this.props.activeItem}
-                        header="Notifications"
+                        header="Extra Info"
                         isHeader
-                        iconName="flaticon-layers"
+                        iconName="flaticon-users"
                         link="/app/notifications"
                         index="ui"
                     />

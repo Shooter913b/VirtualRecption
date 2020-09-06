@@ -204,14 +204,6 @@ class Widget extends React.Component {
         {
           !customControls && mainControls && (
             <div className={`${s.widgetControls} widget-controls`}>
-              {settings && (
-                <button><i className="la la-cog" /></button>
-              )}
-              {settingsInverse && (
-                <button className={`bg-gray-transparent ${s.inverse}`}><i
-                  className="la la-cog text-white"
-                /></button>
-              )}
               {refresh && (
                 <button onClick={this.handleReload} id={`reloadId-${randomId}`}>
                   {typeof refresh === 'string' ?
