@@ -167,7 +167,7 @@ function Locate({ panTo }) {
         );
       }}
     >
-        <img src="compass.svg" alt="compass" />
+
     </button>
   );
 }
