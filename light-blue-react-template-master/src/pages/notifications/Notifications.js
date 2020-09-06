@@ -81,7 +81,7 @@ class Notifications extends React.Component {
         <br />
         <Card className="border-0">
   <CardBody>
-    <h3>Roles</h3>
+    <h3>Our Staff</h3>
     <hr />
     <Row>
       <Col lg="2" xs="12">
@@ -193,7 +193,7 @@ class Notifications extends React.Component {
               <h5 className="m-t-1" className="fw-bold">October</h5>
               <ul>
                 <li><span className="text-danger">[CEO] </span>Hugo Scottsman: 4th</li>
-                <li><span className="text-success">[Manager] </span>Bob Scone: 9th</li>
+                <li><span className="text-warning">[Executive Manager]</span>Bob Scone: 9th</li>
                 <li><span className="text-info">[Salesman] </span>Anna Howard: 12th</li>
                 <li><span className="text-warning">[Executive Manager] </span>Dan King: 13th</li>
                 <li><span className="text-info">[Salesman] </span>Andy Jones: 20th</li>
