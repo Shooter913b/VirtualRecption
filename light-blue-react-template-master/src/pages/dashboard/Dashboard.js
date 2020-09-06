@@ -6,6 +6,12 @@ import {
   Table,
   Label,
   Input,
+  Button,
+  Form,
+  FormGroup,
+  FormText,
+  Card,
+  CardBody
 } from 'reactstrap';
 
 import Widget from '../../components/Widget';
@@ -64,14 +70,23 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className={s.root}>
-        
-        <Row>
-          <Col lg={12}>
-            <Widget className="bg-transparent">
-              <Map />
-            </Widget>
-          </Col>
 
+        <Row>
+          <Map />
+              <Col lg={2}>
+              <FormGroup>
+               <Label>Select</Label>
+               <Input type="select" name="select">
+                 <option>POI</option>
+                 <option>Casual</option>
+                 <option>Urgent</option>
+               </Input>
+             </FormGroup>
+             <FormGroup>
+              <Label>Content</Label>
+              <Input type="text" name="Marker-content" placeholder="Content" />
+            </FormGroup>
+            </Col>
 
         </Row>
 

@@ -164,61 +164,7 @@ class Static extends React.Component {
           <Row>
 
           {this.state.postComp}
-
-
-          <Col lg={3}>
-    <Card className="border-0">
-    <CardBody>
-    <hr />
-    <div>
-    <h3>Michael Scott</h3>
-    <br />
-    <h5>Everyone, we have bad news... the copier is broken. But
-    we are going to make the hot receptionist fix it so don't worry!</h5>
-    </div>
-    </CardBody>
-    </Card>
-    </Col>
-
-    <Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div>
-<h3>Angela Martin</h3>
-<br />
-<h5>Our new product is launching tomorrow. Be sure to attend the
-meeting at 10:30AM sharp.</h5>
-</div>
-</CardBody>
-</Card>
-</Col>  <Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div>
-<h3>Jim Halpert</h3>
-<br />
-<h5>Promotions announced 9/6/20 at the bulletin board.
-Make sure to keep a look out for that.</h5>
-</div>
-</CardBody>
-</Card>
-</Col>  <Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div>
-<h3>Dwight Schrute</h3>
-<br />
-<h5>Heres the trivia for the day. Question: What kind of bear is best.
-False, Black Bear.</h5>
-</div>
-</CardBody>
-</Card>
-</Col>
-
-    </Row>
+            </Row>
     <br />
 
     <Row>
@@ -226,7 +172,7 @@ False, Black Bear.</h5>
       <Card className="border-0">
         <CardBody>
         <div>
-    <InputGroup className={this.state.focused}> 
+    <InputGroup className={this.state.focused}>
       <InputGroupAddon addonType="prepend">
         <InputGroupText><i className="fa fa-comment"></i></InputGroupText>
       </InputGroupAddon>

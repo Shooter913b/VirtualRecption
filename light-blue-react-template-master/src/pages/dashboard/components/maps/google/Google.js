@@ -36,8 +36,8 @@ import css from "./index.css"
 import compass from "./compass.svg"
 const libraries = ["places"];
 const mapContainerStyle = {
-  height: "80vh",
-  width: "65vw",
+  height: "75vh",
+  width: "55vw",
 };
 const options = {
   styles: mapStyles,
@@ -85,7 +85,7 @@ export default function App() {
 
   const panTo = React.useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
-    mapRef.current.setZoom(20);
+    mapRef.current.setZoom(19);
   }, []);
 
   if (loadError) return "Error";
@@ -106,7 +106,7 @@ export default function App() {
       <GoogleMap
         id="map"
         mapContainerStyle={mapContainerStyle}
-        zoom={20}
+        zoom={19}
         center={center}
         options={options}
         onClick={onMapClick}
