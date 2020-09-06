@@ -18,7 +18,7 @@ function Post(props) {
     return (
         <div>
         <Col lg={3}>
-    <Card className="border-0" style={{height: '25 rem'}}>
+    <Card className="border-0" style={{height: '35 rem', width:'26rem'}}>
     <CardBody>
     <hr />
     <div>
