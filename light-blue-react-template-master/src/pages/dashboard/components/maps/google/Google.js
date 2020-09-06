@@ -37,7 +37,7 @@ import compass from "./compass.svg"
 const libraries = ["places"];
 const mapContainerStyle = {
   height: "80vh",
-  width: "70vw",
+  width: "65vw",
 };
 const options = {
   styles: mapStyles,

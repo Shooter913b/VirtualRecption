@@ -226,7 +226,7 @@ False, Black Bear.</h5>
       <Card className="border-0">
         <CardBody>
         <div>
-    <InputGroup className={this.state.focused}> b
+    <InputGroup className={this.state.focused}> 
       <InputGroupAddon addonType="prepend">
         <InputGroupText><i className="fa fa-comment"></i></InputGroupText>
       </InputGroupAddon>
