@@ -93,10 +93,10 @@ class Notifications extends React.Component {
       <Col lg="2" xs="12">
         <h5 className="m-t-1" className="text-warning">Executive Manager</h5>
         <ul>
-          <li>Hector Martinez</li>
+          <li>Hector Fernandez</li>
           <li>Jan Levinson</li>
-          <li>Matthew</li>
-          <li>Ryan Fitzgerald</li>
+          <li>Matthew Garcia</li>
+          <li>Ryan Howard</li>
           <li>Dan King</li>
           <li><span className="fw-bold">Bob Scone </span>(You)</li>
           <li><LinksGroup className="fw-bold" className="text-info" header="YOUR ACCOUNT" isHeader link="/app/typography"/></li>
@@ -113,8 +113,8 @@ class Notifications extends React.Component {
         <li>Travis Strater</li>
         <li>Aaron Rosco</li>
         <li>Angela Martin</li>
-        <li>Brody </li>
-        <li>Stanley Green</li>
+        <li>Brody Daniels</li>
+        <li>Stanley Hudson</li>
         <li>Jim Halpert</li>
         <li>Sam Berling</li>
         <li>Michael Scott</li>
@@ -125,7 +125,7 @@ class Notifications extends React.Component {
       <Col lg="2" xs="12">
         <h5 className="m-t-1" className="text-info">Salesman</h5>
         <ul>
-        <li>Kevin Garcia</li>
+        <li>Kevin Malone</li>
         <li>Patrick Hawk</li>
         <li>Neal Roberts</li>
         <li>Richard Jameson</li>
@@ -136,12 +136,12 @@ class Notifications extends React.Component {
         <li>Tony Banning</li>
         <li>Paul Baster</li>
         <li>Ashley Jackson</li>
-        <li>Todd Walker</li>
+        <li>Todd Packer</li>
         <li>Randy Lance</li>
-        <li>Oscar Fernandez</li>
+        <li>Oscar Martinez</li>
         <li>Gordon Smith</li>
         <li>Alice Hampton</li>
-        <li>Joe Packer</li>
+        <li>Joe Walker</li>
         <li>Samantha Wesley</li>
         <li>Henry McMiller</li>
         <li>Jake Harper</li>
@@ -155,21 +155,21 @@ class Notifications extends React.Component {
         <li>Ethan O'Neil</li>
         <li>Quentin Bennin</li>
         <li>James Trumbull</li>
-        <li>Anna Howard</li>
+        <li>Anna Fitzgerald</li>
         <li>Felix Hunt</li>
         <li>Bruno Jones</li>
         <li>George Heffley</li>
         <li>Chad Barker</li>
         <li>Hank Brown</li>
-        <li>Bethany</li>
-        <li>Eli Hudson</li>
+        <li>Bethany Willis</li>
+        <li>Eli Green</li>
         <li>Jack Walton</li>
-        <li>Charlie Bernard</li>
-        <li>Kirk Wallace</li>
-        <li>David Taylor</li>
+        <li>Andy Bernard</li>
+        <li>David Wallace</li>
+        <li>Chris Taylor</li>
         <li>Jessie Pierce</li>
         <li>Max Corman</li>
-        <li>Andy Jones</li>
+        <li>Charles Jones</li>
         <li>Daniel Waterman</li>
         </ul>
       </Col>
