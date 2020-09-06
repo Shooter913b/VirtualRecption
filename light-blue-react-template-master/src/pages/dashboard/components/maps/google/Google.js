@@ -20,6 +20,7 @@ import usePlacesAutocomplete, {
   getGeocode,
   getLatLng,
 } from "use-places-autocomplete";
+import * as firebase from 'firebase';
 import {
   Combobox,
   ComboboxInput,
@@ -57,19 +58,29 @@ export default function App() {
   const [selected, setSelected] = React.useState(null);
 
   const onMapClick = React.useCallback((e) => {
+    const mark = {
+      lat: e.latLng.lat(),
+      lng: e.latLng.lng(),
+      time: new Date()
+    }
+    firebase.firestore().collection("Markers").add({mark})
     setMarkers((current) => [
       ...current,
-      {
-        lat: e.latLng.lat(),
-        lng: e.latLng.lng(),
-        time: new Date(),
-      },
+      mark,
     ]);
   }, []);
 
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
+    firebase.firestore().collection("Markers").get().then((snapshot) => {
+      snapshot.forEach((ref) => {
+        setMarkers((current) => [
+          ...current,
+          ref.data().mark,
+        ]);
+      })
+    });
   }, []);
 
   const panTo = React.useCallback(({ lat, lng }) => {

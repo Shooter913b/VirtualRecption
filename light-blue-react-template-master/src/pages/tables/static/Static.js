@@ -24,28 +24,105 @@ import {
   InputGroupAddon,
   InputGroupText,
 } from "reactstrap";
+import css from "./posts.css"
+import Post from "./Post.js"
+import * as firebase from 'firebase';
+import "firebase/auth";
+import "firebase/firestore";
 //import numOfPosts from './NumOfPosts';
 
-let numOfPosts = 8
+var config = {
+  apiKey: "AIzaSyDsFYFFrQSKyTW852dCPDSM0FTZu8QlfEs",
+    authDomain: "virtualreception-bfa65.firebaseapp.com",
+    databaseURL: "https://virtualreception-bfa65.firebaseio.com",
+    projectId: "virtualreception-bfa65",
+    storageBucket: "virtualreception-bfa65.appspot.com",
+    messagingSenderId: "450291103818",
+    appId: "1:450291103818:web:ddc40cbf8754771f1dceb3",
+    measurementId: "G-YD1DZRQ32T"
+};
+if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+}
+var db = firebase.firestore();
+
+var database = firebase.firestore();
+var usersRef = db.collection("Users");
+var postRef = db.collection("Posts");
+  usersRef.doc("BxQGdgs2wKBCk79Cb5pr").onSnapshot(function(doc) {
+        console.log("Current data: ", doc.data());
+    });
+    var docRef = db.collection("Users").doc("BxQGdgs2wKBCk79Cb5pr");
+
+    docRef.get().then(function(doc) {
+        if (doc.exists) {
+            console.log("Document data:", doc.data());
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+        }
+    }).catch(function(error) {
+        console.log("Error getting document:", error);
+    });
 
 class Static extends React.Component {
-
-  state = {
-    options: {
-      position: "top-right",
-      autoClose: 5000,
-      closeOnClick: false,
-      pauseOnHover: false,
-      draggable: true
-    }
+  constructor() {
+    super();
+    this.state = {
+      postComp: [],
+      newPost: '',
+      options: {
+        position: "top-right",
+        autoClose: 5000,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: true
+      }
+    };
+    this.onEdit = this.onEdit.bind(this);
+   this.addSuccessNotification = this.addSuccessNotification.bind(this);
   }
-
-
+  onEdit(event){
+      this.setState({[event.target.name] : event.target.value})
+  }
     addSuccessNotification = () =>{
-      toast.success('Successfully Posted!', this.state.options);
-      numOfPosts=numOfPosts+1;
-  }
+      const post = {
+        Content: this.state.newPost,
+        Name: 'Bob Scone'
+      }
+      var posts = 0
+      postRef.add(post).then(() => {
+      usersRef.doc("BxQGdgs2wKBCk79Cb5pr").get().then((docRef) => {
+        posts = docRef.data().numOfPosts;
+      }).then(() => {
+        usersRef.doc("BxQGdgs2wKBCk79Cb5pr").update({numOfPosts:posts + 1});
+      }).then(() => {
+        toast.success('Successfully Posted!', this.state.options);
+        console.log(posts);
+      }).then(() => {
+        window.location.reload();
+      });
+    });
 
+
+
+
+  }
+  componentWillUnmount(){
+
+  }
+  componentDidMount(){
+    var postObjs = []
+    postRef.get().then((snapshot) => {
+      snapshot.forEach((ref) =>{
+        postObjs.push(ref.data())
+      })
+    }).then(() => {
+      const postComponents = postObjs.map(post => <Post key={(Math.random()*10000)%100}name={post.Name} content={post.Content} />)
+      console.log(postComponents);
+      this.setState({postComp: postComponents})
+    })
+  }
   parseDate(date) {
     this.dateSet = date.toDateString().split(' ');
 
@@ -73,63 +150,18 @@ class Static extends React.Component {
 
 
 
+
+
   render() {
+
+
     return (
       <div className={s.root}>
           <h1 className="page-title">Posts</h1>
           <br />
           <Row>
-          <Col lg={3}>
-    <Card className="border-0">
-    <CardBody>
-    <hr />
-    <div>
-    <h3>Michael Scott</h3>
-    <br />
-    <h5>Everyone, we have bad news... the copier is broken. But
-    we are going to make the hot receptionist fix it so don't worry!</h5>
-    </div>
-    </CardBody>
-    </Card>
-    </Col>
+          {this.state.postComp}
 
-    <Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div>
-<h3>Angela Martin</h3>
-<br />
-<h5>Our new product is launching tomorrow. Be sure to attend the
-meeting at 10:30AM sharp.</h5>
-</div>
-</CardBody>
-</Card>
-</Col>  <Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div>
-<h3>Jim Halpert</h3>
-<br />
-<h5>Promotions announced 9/6/20 at the bulletin board.
-Make sure to keep you look out for that.</h5>
-</div>
-</CardBody>
-</Card>
-</Col>  <Col lg={3}>
-<Card className="border-0">
-<CardBody>
-<hr />
-<div>
-<h3>Dwight Schrute</h3>
-<br />
-<h5>Heres the trivia for the day. Question: What kind of bear is best.
-False, Black Bear.</h5>
-</div>
-</CardBody>
-</Card>
-</Col>
     </Row>
     <br />
 
@@ -138,7 +170,7 @@ False, Black Bear.</h5>
       <Card className="border-0">
         <CardBody>
         <div>
-    <InputGroup className={this.state.focused}>
+    <InputGroup className={this.state.focused}> b
       <InputGroupAddon addonType="prepend">
         <InputGroupText><i className="fa fa-comment"></i></InputGroupText>
       </InputGroupAddon>
@@ -146,7 +178,9 @@ False, Black Bear.</h5>
           type="textarea"
           placeholder="Type here..."
           onFocus={this.onFocus}
+          name = "newPost"
           onBlur={this.onBlur}
+          onChange = {this.onEdit}
         />
         </InputGroup>
     </div>

@@ -138,6 +138,7 @@ class Header extends React.Component {
                   header="Bob Scone"
                   isHeader
                   link="/app/typography"
+                  
               />
           <NavItem className="d-lg-none d-md-block d-sm-none">
             <NavLink onClick={this.toggleSearchOpen} className={s.navItem} href="#">
