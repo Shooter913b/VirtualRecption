@@ -18,8 +18,6 @@ import uuid from 'uuid/v4'
 import Widget from '../../components/Widget';
 import s from '../notifications/Notifications.module.scss';
 import NumOfPosts from "../numOfPosts"
-
-
 import avatar from '../../images/people/a5.jpg';
 import * as firebase from 'firebase';
 import "firebase/auth";
