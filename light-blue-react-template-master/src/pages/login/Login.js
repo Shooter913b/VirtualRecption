@@ -110,7 +110,9 @@ class Login extends React.Component {
                                   {this.props.isFetching ? 'Loading...' : 'Login'}
                                 </Button>
                                 <br />
-                                <Button color="success" className="text-white">Guest</Button>
+                                <Button color="success" className="text-white">
+                                  Guest
+                                </Button>
                                 <p className="widget-auth-info mt-4">
                                     Don't have an account? Sign up now or sign in with guest.
                                 </p>
