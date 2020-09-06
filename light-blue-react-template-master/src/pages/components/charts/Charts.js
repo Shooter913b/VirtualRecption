@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Row, Col
+  Row, Col, Card, CardBody
 } from 'reactstrap';
 
 import Widget from '../../../components/Widget';
@@ -67,9 +67,19 @@ class Charts extends React.Component {
     const { cd, ld, initEchartsOptions, sparklineData } = this.state
     return (
       <div className={s.root}>
-        <h1 className="page-title">Company Growth<span className="fw-semi-bold">Charts</span></h1>
-        <br />
-        <br />
+  <h1 className="page-title">Company Stats <span className="fw-bold">Charts</span></h1>
+  <br />
+  <br />
+  <br />
+      <Card className="border-0">
+  <CardBody>
+
+    <div>
+    </div>
+
+  </CardBody>
+</Card>
+
         <br />
         <div>
           <Row>
@@ -89,7 +99,7 @@ class Charts extends React.Component {
             </Col>
             <Col lg={5} xs={12}>
               <Widget
-                title={<h5><span className='fw-semi-bold'>Yearly Growth</span></h5>}
+                title={<h5><span className='fw-semi-bold'>Revenue</span></h5>}
                 close collapse
               >
                 <ReactEchartsCore
