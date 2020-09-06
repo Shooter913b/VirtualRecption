@@ -70,7 +70,6 @@ class Profile extends React.Component {
       Error changing password. Unavailable at this time. Please try again later <br/>
 
     </div>,
-
     );
   }
 
