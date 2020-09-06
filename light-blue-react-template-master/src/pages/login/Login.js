@@ -6,9 +6,8 @@ import { Container, Alert, Button, FormGroup, Label, InputGroup, InputGroupAddon
 import Widget from '../../components/Widget';
 import { loginUser } from '../../actions/user';
 import microsoft from '../../images/microsoft.png';
-
+import LinksGroup from '../../components/Sidebar/LinksGroup';
 import logo from '../../images/logo.png';
-
 class Login extends React.Component {
     static propTypes = {
         dispatch: PropTypes.func.isRequired,
@@ -110,10 +109,13 @@ class Login extends React.Component {
                                   {this.props.isFetching ? 'Loading...' : 'Login'}
                                 </Button>
                                 <br />
-                                <Button color="success" className="text-white">Guest</Button>
-                                <p className="widget-auth-info mt-4">
-                                    Don't have an account? Sign up now or sign in with guest.
-                                </p>
+                                <LinksGroup className="text-info"
+                                    header="  Don't have an account? Click here!"
+                                    isHeader
+                                    link="/app/chart"
+
+                                />
+
                                 <Link className="d-block text-center mb-4" to="register">Create an Account</Link>
                                 <div className="social-buttons">
                                 </div>

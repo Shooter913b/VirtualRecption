@@ -89,6 +89,15 @@ class Sidebar extends React.Component {
                     />
 
                     <LinksGroup className="text-info"
+                        onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
+                        activeItem={this.props.activeItem}
+                        header="Account"
+                        isHeader
+                        iconName="flaticon-user"
+                        link="/app/typography"
+                        index="core"
+                    />
+                    <LinksGroup className="text-info"
                         onActiveSidebarItemChange={t => this.props.dispatch(changeActiveSidebarItem(t))}
                         activeItem={this.props.activeItem}
                         header="Posts"
@@ -106,24 +115,8 @@ class Sidebar extends React.Component {
                         link="/app/notifications"
                         index="ui"
                     />
-                    <LinksGroup className="text-info"
-                        onActiveSidebarItemChange={activeItem => this.props.dispatch(changeActiveSidebarItem(activeItem))}
-                        activeItem={this.props.activeItem}
-                        header="Components"
-                        isHeader
-                        iconName="flaticon-list"
-                        link="/app/forms"
-                        index="forms"
-                        childrenLinks={[
-                            {
-                                header: 'Charts', link: '/app/charts',
-                            },
-                            {
-                                header: 'Icons', link: '/app/icons',
-                            },
 
-                        ]}
-                    />
+
                 </ul>
 
             </nav>

@@ -25,6 +25,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official'
 import exporting from 'highcharts/modules/exporting';
 import exportData from 'highcharts/modules/export-data';
+import Map from '../../dashboard/components/maps/google/Google';
 
 exporting(Highcharts);
 exportData(Highcharts);
@@ -32,104 +33,24 @@ exportData(Highcharts);
 
 class Charts extends React.Component {
 
-  state = {
-    cd: chartData,
-    ld: liveChart,
-    initEchartsOptions: {
-      renderer: 'canvas'
-    },
-    sparklineData: {
-      series: [{data: [1,7,3,5,7,8]}],
-      options1: {
-        colors: ['#ffc247'],
-        plotOptions: {
-          bar: {
-            columnWidth: '50%'
-          }
-        }
-      },
-      options2: {
-        colors: ['#ffc0d9'],
-        plotOptions: {
-          bar: {
-            columnWidth: '50%'
-          }
-        }
-      }
-    }
-  }
 
-  componentWillUnmount() {
-    clearInterval(liveChartInterval);
-  }
 
   render() {
-    const { cd, ld, initEchartsOptions, sparklineData } = this.state
+
     return (
       <div className={s.root}>
-  <h1 className="page-title">Company Stats <span className="fw-bold">Charts</span></h1>
+  <h1 className="page-title">Dashboard <span className="fw-bold">Map</span></h1>
   <br />
   <br />
   <br />
-      <Card className="border-0">
-  <CardBody>
 
-    <div>
-    </div>
-
-  </CardBody>
-</Card>
 
         <br />
         <div>
-          <Row>
-            <Col lg={7} xs={12}>
-              <Widget
-                title={<h5><span className='fw-semi-bold'>Stocks</span></h5>}
-                close collapse
-              >
-                <ApexChart
-                  className="sparkline-chart"
-                  height={350}
-                  series={cd.apex.column.series}
-                  options={cd.apex.column.options}
-                  type={"bar"}
-                />
-              </Widget>
-            </Col>
-            <Col lg={5} xs={12}>
-              <Widget
-                title={<h5><span className='fw-semi-bold'>Revenue</span></h5>}
-                close collapse
-              >
-                <ReactEchartsCore
-                  echarts={echarts}
-                  option={cd.echarts.line}
-                  opts={initEchartsOptions}
-                  style={{height: "365px"}}
-                />
-              </Widget>
-            </Col>
-            <Col lg={5} xs={12}>
+        <Row>
+        <Map />
+        </Row>
 
-            </Col>
-            <Col lg={7} xs={12}>
-              <Row>
-                <Col lg={6} xs={12}>
-
-                </Col>
-                <Col lg={6} xs={12}>
-
-                </Col>
-                <Col lg={12} xs={12}>
-
-                </Col>
-              </Row>
-            </Col>
-            <Col lg={12} xs={12}>
-
-            </Col>
-          </Row>
         </div>
       </div>
     );
