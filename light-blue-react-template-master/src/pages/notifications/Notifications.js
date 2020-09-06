@@ -176,7 +176,7 @@ class Notifications extends React.Component {
     </Row>
   </Widget>
   <br />
-        <Widget title={<h4> Birthdays </h4>} close collapse settings>
+        <Widget title={<h4> Upcoming Birthdays </h4>} close collapse settings>
           <Row>
             <Col lg="4" xs="12">
               <h5 className="m-t-1" className="fw-bold">September</h5>
