@@ -79,10 +79,9 @@ class Notifications extends React.Component {
         <br />
         <br />
         <br />
-        <Card className="border-0">
-  <CardBody>
-    <h3>Our Staff</h3>
-    <hr />
+
+
+  <Widget title={<h4> Our Staff </h4>} close collapse settings>
     <Row>
       <Col lg="2" xs="12">
         <h5 className="m-t-1" className="text-danger">CEO</h5>
@@ -175,8 +174,7 @@ class Notifications extends React.Component {
         </ul>
       </Col>
     </Row>
-  </CardBody>
-</Card>
+  </Widget>
   <br />
         <Widget title={<h4> Birthdays </h4>} close collapse settings>
           <Row>
