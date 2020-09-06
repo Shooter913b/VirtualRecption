@@ -27,7 +27,7 @@ export const chartData = {
           enabled: false,
         },
         xaxis: {
-          categories: ['Febaury', 'April', 'june', 'August', 'October', 'decemeber'],
+          categories: ['Febaury', 'April', 'June', 'August', 'October', 'Decemeber'],
           labels: {
             style: {
               colors: columnColors,
@@ -59,7 +59,7 @@ export const chartData = {
     pie: {
       series: [25, 15, 44, 55, 41, 17],
       options: {
-        labels: ['Febaury', 'April', 'june', 'August', 'October', 'decemeber'],
+        labels: ['Febaury', 'April', 'June', 'August', 'October', 'Decemeber'],
         theme: {
           monochrome: {
             enabled: true,
@@ -95,7 +95,7 @@ export const chartData = {
         }
       },
       legend: {
-        data: ['2019 growth', '2020 growth'],
+        data: ['2019 revenue($)', '2020 revenue($)'],
         textStyle: {
           color: colors.textColor
         }
@@ -124,7 +124,7 @@ export const chartData = {
               }
             }
           },
-          data: ["2020-1", "2020-2", "2020-3", "2020-4", "2020-5", "2020-6", "2020-7", "2020-8", "2020-9", "2020-10", "2020-11", "2020-12"]
+          data: ["2019-3", "2019-6", "2019-9", "2019-12"]
         },
         {
           type: 'category',
@@ -145,7 +145,7 @@ export const chartData = {
               }
             }
           },
-          data: ["2019-1", "2019-2", "2019-3", "2019-4", "2019-5", "2019-6", "2019-7", "2019-8", "2019-9", "2019-10", "2019-11", "2019-12"]
+          data: ["2020-3", "2020-6", "2020-9", "2020-12"]
         }
       ],
       yAxis: [
@@ -173,17 +173,17 @@ export const chartData = {
       ],
       series: [
         {
-          name: '2020 month',
+          name: '2019 revenue',
           type: 'line',
           xAxisIndex: 1,
           smooth: true,
-          data: [23, 21, 20, 19, 18, 24, 21, 17, 2, 1, 4, ]
+          data: [100, 200 , 250, 230, 280, 180, 190, 300, 500, 280, 300, 275, 280, ]
         },
         {
-          name: '2020 growth',
+          name: '2020 revenue',
           type: 'line',
           smooth: true,
-          data: [, , , , , , , , , , , ]
+          data: [150, 200, 230, 210, 240, 300, 310, 320, 280, 310, ]
         }
       ]
     },
