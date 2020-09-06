@@ -49,7 +49,8 @@ const center = {
   lng:  -118.384790,
 };
 
-export default function App() {
+const App = (props) => {
+  // console.log(props.markerType + ": " + props.markerContent); ??// TODO: THHIS IS WHHERE YOU WANNA CHECK
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: "AIzaSyCStTMJl2QcIuEkTRGJyu-1TIO_46TcMaA",
     libraries,
@@ -61,7 +62,9 @@ export default function App() {
     const mark = {
       lat: e.latLng.lat(),
       lng: e.latLng.lng(),
-      time: new Date()
+      time: new Date(),
+      type: props.markerType,
+      content: props.markerContent
     }
     firebase.firestore().collection("Markers").add({mark})
     setMarkers((current) => [
@@ -120,7 +123,7 @@ export default function App() {
               setSelected(marker);
             }}
             icon={{
-
+            
               origin: new window.google.maps.Point(0, 0),
               anchor: new window.google.maps.Point(15, 15),
               scaledSize: new window.google.maps.Size(30, 30),
@@ -137,7 +140,7 @@ export default function App() {
           >
             <div>
               <h2>
-                POI
+                {props.markerContent}
               </h2>
 
             </div>
@@ -167,7 +170,7 @@ function Locate({ panTo }) {
         );
       }}
     >
-        <img src="compass.svg" alt="compass" />
+
     </button>
   );
 }
@@ -221,3 +224,4 @@ function Search({ panTo }) {
     </div>
   );
 }
+export default App

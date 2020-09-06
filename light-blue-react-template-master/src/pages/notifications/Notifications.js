@@ -146,7 +146,7 @@ class Notifications extends React.Component {
         <ul>
           <li>Hector Fernandez</li>
           <li>Jan Levinson</li>
-          <li>Matthew Garcia</li>
+          <li>Matthew Spilner</li>
           <li>Ryan Howard</li>
           <li>Dan King</li>
           <li><span className="fw-bold">Bob Scone </span>(You)</li>
@@ -185,7 +185,7 @@ class Notifications extends React.Component {
         <li>Luke Johnson</li>
         <li>Alexia Carter</li>
         <li>Tony Banning</li>
-        <li>Paul Baster</li>
+        <li>Paul Buster</li>
         <li>Ashley Jackson</li>
         <li>Todd Packer</li>
         <li>Randy Lance</li>

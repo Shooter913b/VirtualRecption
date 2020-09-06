@@ -70,7 +70,6 @@ class Profile extends React.Component {
       Error changing password. Unavailable at this time. Please try again later <br/>
 
     </div>,
-
     );
   }
 
@@ -88,12 +87,19 @@ render(){
     <div>
         <h1 className="page-title">Account </h1>
           <br />
+          <br />
+          <br />
           <Row >
             <Col xs={12} md={6}>
             <Card className="border-0">
               <CardBody>
                 <h2 className="text-info">Bob Scone</h2>
                   <img src={avatar} alt="..."/>
+                  <ul>
+                    <li>Username: Bob Scone</li>
+                    <li>Email: BobScone123@gmail.com</li>
+                    <li>Rank: <span className="text-warning">Executive Manager</span></li>
+                  </ul>
                 <hr />
                 <p>Change Password</p>
                 <InputGroup>
