@@ -1,8 +1,9 @@
 {
   "name": "light-blue-react-template",
   "version": "1.0.0",
-  "private": true,
-  "scripts": {
+  "homepage": "https://virtual-reception.netlify.app/",
+    "private": true,
+    "scripts": {
     "build": "cross-env PUBLIC_URL='./' node scripts/build.js",
     "start": "node scripts/start.js",
     "test": "node scripts/test.js"
