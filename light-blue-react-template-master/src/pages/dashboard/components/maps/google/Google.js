@@ -48,7 +48,7 @@ const center = {
   lat: 33.946584,
   lng:  -118.384790,
 };
-
+let url = ''
 const App = (props) => {
   // console.log(props.markerType + ": " + props.markerContent); ??// TODO: THHIS IS WHHERE YOU WANNA CHECK
   const { isLoaded, loadError } = useLoadScript({
@@ -121,9 +121,11 @@ const App = (props) => {
             position={{ lat: marker.lat, lng: marker.lng }}
             onClick={() => {
               setSelected(marker);
+
+          
             }}
             icon={{
-            
+              url: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
               origin: new window.google.maps.Point(0, 0),
               anchor: new window.google.maps.Point(15, 15),
               scaledSize: new window.google.maps.Size(30, 30),
