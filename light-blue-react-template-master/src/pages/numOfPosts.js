@@ -3,14 +3,14 @@ import * as firebase from 'firebase';
 import "firebase/auth";
 import "firebase/firestore";
 var config = {
-  apiKey: "AIzaSyDsFYFFrQSKyTW852dCPDSM0FTZu8QlfEs",
+    apiKey: "AIzaSyDsFYFFrQSKyTW852dCPDSM0FTZu8QlfEs",
     authDomain: "virtualreception-bfa65.firebaseapp.com",
     databaseURL: "https://virtualreception-bfa65.firebaseio.com",
     projectId: "virtualreception-bfa65",
     storageBucket: "virtualreception-bfa65.appspot.com",
     messagingSenderId: "450291103818",
     appId: "1:450291103818:web:ddc40cbf8754771f1dceb3",
-    measurementId: "G-YD1DZRQ32T"
+    measurementId: "G-YD1DZRQ32T"  
 };
 
 if (!firebase.apps.length) {
