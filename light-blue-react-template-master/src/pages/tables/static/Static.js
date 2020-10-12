@@ -47,12 +47,9 @@ if (!firebase.apps.length) {
 var db = firebase.firestore();
 
 var database = firebase.firestore();
-var usersRef = db.collection("Users");
+
 var postRef = db.collection("Posts");
-  usersRef.doc("BxQGdgs2wKBCk79Cb5pr").onSnapshot(function(doc) {
-        console.log("Current data: ", doc.data());
-    });
-    var docRef = db.collection("Users").doc("BxQGdgs2wKBCk79Cb5pr");
+    var docRef = db.collection("Posts").doc("qVuI3qOG8m9toriFYwUz");
 
     docRef.get().then(function(doc) {
         if (doc.exists) {
